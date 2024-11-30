@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Map extends Model
 {
     use HasFactory;
-    
-    public function user()   
+
+    public function posts()   
     {
-        return $this->belongsTo(User::class);  
+        return $this->hasMany(Post::class);  
     }
 }
